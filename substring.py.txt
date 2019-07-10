@@ -3,12 +3,12 @@ NO_OF_CHARS = 256
 
 def max_distinct_char(str, n): 
   
-    # Initialize all character's 
-    # count with 0 
+  
+    
     count = [0] * NO_OF_CHARS 
       
-    # Increase the count in array  
-    # if a character is found 
+    
+   
     for i in range(n): 
         count[ord(str[i])] += 1
       
@@ -21,11 +21,11 @@ def max_distinct_char(str, n):
   
 def smallesteSubstr_maxDistictChar(str): 
   
-    n = len(str)     # size of given string 
+    n = len(str)     
   
    
     max_distinct = max_distinct_char(str, n) 
-    minl = n     # result 
+    minl = n    
       
     
     for i in range(n): 
@@ -35,10 +35,10 @@ def smallesteSubstr_maxDistictChar(str):
             sub_distinct_char = max_distinct_char(subs,  
                                                   subs_lenght) 
               
-            # We have to check here both conditions together 
-            # 1. substring's distinct characters is equal 
-            # to maximum distinct characters 
-            # 2. substing's length should be minimum  
+           
+            
+
+ 
             if (subs_lenght < minl and 
                 max_distinct == sub_distinct_char): 
                 minl = subs_lenght 
@@ -48,10 +48,10 @@ def smallesteSubstr_maxDistictChar(str):
 if __name__ == "__main__": 
       
     # Input String 
-    str = "AABBBCBB"
+    str = input()
       
     l = smallesteSubstr_maxDistictChar(str); 
-    print( "The length of the smallest substring", 
-           "consisting of maximum distinct", 
-           "characters :", l) 
+    print(l)
+
+ 
   
